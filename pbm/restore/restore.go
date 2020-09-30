@@ -207,10 +207,10 @@ func (r *Restore) Run(cmd pbm.RestoreCmd) (err error) {
 			Archive: "-",
 		},
 		OutputOptions: &mongorestore.OutputOptions{
-			BulkBufferSize:           2000,
+			BulkBufferSize:           100,
 			BypassDocumentValidation: true,
 			Drop:                     true,
-			NumInsertionWorkers:      20,
+			NumInsertionWorkers:      2,
 			NumParallelCollections:   1,
 			PreserveUUID:             preserveUUID,
 			StopOnError:              true,
