@@ -14,8 +14,8 @@ import (
 	"github.com/pkg/errors"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/percona/percona-backup-mongodb/pbm"
-	"github.com/percona/percona-backup-mongodb/version"
+	"github.com/sbstp/percona-backup-mongodb/pbm"
+	"github.com/sbstp/percona-backup-mongodb/version"
 )
 
 var (

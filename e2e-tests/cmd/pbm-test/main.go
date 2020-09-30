@@ -9,10 +9,10 @@ import (
 
 	"github.com/hashicorp/go-version"
 	"github.com/minio/minio-go"
-	"github.com/percona/percona-backup-mongodb/pbm"
+	"github.com/sbstp/percona-backup-mongodb/pbm"
 	"gopkg.in/yaml.v2"
 
-	"github.com/percona/percona-backup-mongodb/e2e-tests/pkg/tests/sharded"
+	"github.com/sbstp/percona-backup-mongodb/e2e-tests/pkg/tests/sharded"
 )
 
 const (

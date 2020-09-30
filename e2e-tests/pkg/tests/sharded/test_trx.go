@@ -13,7 +13,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 	"go.mongodb.org/mongo-driver/mongo/writeconcern"
 
-	"github.com/percona/percona-backup-mongodb/e2e-tests/pkg/pbm"
+	"github.com/sbstp/percona-backup-mongodb/e2e-tests/pkg/pbm"
 )
 
 type shard struct {

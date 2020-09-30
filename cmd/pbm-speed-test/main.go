@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"github.com/alecthomas/kingpin"
-	"github.com/percona/percona-backup-mongodb/speedt"
+	"github.com/sbstp/percona-backup-mongodb/speedt"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/percona/percona-backup-mongodb/pbm"
-	"github.com/percona/percona-backup-mongodb/pbm/storage/blackhole"
-	"github.com/percona/percona-backup-mongodb/version"
+	"github.com/sbstp/percona-backup-mongodb/pbm"
+	"github.com/sbstp/percona-backup-mongodb/pbm/storage/blackhole"
+	"github.com/sbstp/percona-backup-mongodb/version"
 )
 
 func main() {

@@ -14,8 +14,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 
-	"github.com/percona/percona-backup-mongodb/pbm"
-	"github.com/percona/percona-backup-mongodb/pbm/storage"
+	"github.com/sbstp/percona-backup-mongodb/pbm"
+	"github.com/sbstp/percona-backup-mongodb/pbm/storage"
 )
 
 var excludeFromRestore = []string{

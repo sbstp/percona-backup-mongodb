@@ -10,7 +10,7 @@ import (
 	"github.com/pierrec/lz4"
 	"github.com/pkg/errors"
 
-	"github.com/percona/percona-backup-mongodb/pbm"
+	"github.com/sbstp/percona-backup-mongodb/pbm"
 )
 
 // Decompress wraps given reader by the decompressing io.ReadCloser

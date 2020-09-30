@@ -12,7 +12,7 @@ Summary: MongoDB backup tool
 
 Group:  Applications/Databases
 License: ASL 2.0
-URL:  https://github.com/percona/percona-backup-mongodb
+URL:  https://github.com/sbstp/percona-backup-mongodb
 Source0: percona-backup-mongodb-%{version}.tar.gz
 
 BuildRequires: golang make git
@@ -51,9 +51,9 @@ export GOPATH=$(pwd)/
 export PATH="/usr/local/go/bin:$PATH:$GOPATH"
 export GOBINPATH="/usr/local/go/bin"
 mkdir -p src/github.com/percona/
-mv percona-backup-mongodb-%{version} src/github.com/percona/percona-backup-mongodb
-ln -s src/github.com/percona/percona-backup-mongodb percona-backup-mongodb-%{version}
-cd src/github.com/percona/percona-backup-mongodb && make build
+mv percona-backup-mongodb-%{version} src/github.com/sbstp/percona-backup-mongodb
+ln -s src/github.com/sbstp/percona-backup-mongodb percona-backup-mongodb-%{version}
+cd src/github.com/sbstp/percona-backup-mongodb && make build
 cd %{_builddir}
 
 
@@ -67,19 +67,19 @@ export GOPATH=$(pwd)/
 export PATH="/usr/local/go/bin:$PATH:$GOPATH"
 export GOBINPATH="/usr/local/go/bin"
 cd src/
-cp github.com/percona/percona-backup-mongodb/bin/pbm-agent $RPM_BUILD_ROOT/%{_bindir}/
-cp github.com/percona/percona-backup-mongodb/bin/pbm $RPM_BUILD_ROOT/%{_bindir}/
-cp github.com/percona/percona-backup-mongodb/bin/pbm-speed-test $RPM_BUILD_ROOT/%{_bindir}/
+cp github.com/sbstp/percona-backup-mongodb/bin/pbm-agent $RPM_BUILD_ROOT/%{_bindir}/
+cp github.com/sbstp/percona-backup-mongodb/bin/pbm $RPM_BUILD_ROOT/%{_bindir}/
+cp github.com/sbstp/percona-backup-mongodb/bin/pbm-speed-test $RPM_BUILD_ROOT/%{_bindir}/
 install -m 0755 -d $RPM_BUILD_ROOT/%{_sysconfdir}
 install -m 0755 -d $RPM_BUILD_ROOT/%{_sysconfdir}/sysconfig
-install -D -m 0640 github.com/percona/percona-backup-mongodb/packaging/conf/pbm-storage.conf $RPM_BUILD_ROOT/%{_sysconfdir}/pbm-storage.conf
-install -D -m 0640 github.com/percona/percona-backup-mongodb/packaging/conf/pbm-agent.env $RPM_BUILD_ROOT/%{_sysconfdir}/sysconfig/pbm-agent
+install -D -m 0640 github.com/sbstp/percona-backup-mongodb/packaging/conf/pbm-storage.conf $RPM_BUILD_ROOT/%{_sysconfdir}/pbm-storage.conf
+install -D -m 0640 github.com/sbstp/percona-backup-mongodb/packaging/conf/pbm-agent.env $RPM_BUILD_ROOT/%{_sysconfdir}/sysconfig/pbm-agent
 %if 0%{?systemd}
   install -m 0755 -d $RPM_BUILD_ROOT/%{_unitdir}
-  install -m 0644 github.com/percona/percona-backup-mongodb/packaging/conf/pbm-agent.service $RPM_BUILD_ROOT/%{_unitdir}/pbm-agent.service
+  install -m 0644 github.com/sbstp/percona-backup-mongodb/packaging/conf/pbm-agent.service $RPM_BUILD_ROOT/%{_unitdir}/pbm-agent.service
 %else
   install -m 0755 -d $RPM_BUILD_ROOT/etc/rc.d/init.d
-  install -m 0750 github.com/percona/percona-backup-mongodb/packaging/rpm/pbm-agent.init $RPM_BUILD_ROOT/etc/rc.d/init.d/pbm-agent
+  install -m 0750 github.com/sbstp/percona-backup-mongodb/packaging/rpm/pbm-agent.init $RPM_BUILD_ROOT/etc/rc.d/init.d/pbm-agent
 %endif
 
 

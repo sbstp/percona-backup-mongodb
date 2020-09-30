@@ -10,10 +10,10 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"gopkg.in/yaml.v2"
 
-	"github.com/percona/percona-backup-mongodb/pbm/storage"
-	"github.com/percona/percona-backup-mongodb/pbm/storage/blackhole"
-	"github.com/percona/percona-backup-mongodb/pbm/storage/fs"
-	"github.com/percona/percona-backup-mongodb/pbm/storage/s3"
+	"github.com/sbstp/percona-backup-mongodb/pbm/storage"
+	"github.com/sbstp/percona-backup-mongodb/pbm/storage/blackhole"
+	"github.com/sbstp/percona-backup-mongodb/pbm/storage/fs"
+	"github.com/sbstp/percona-backup-mongodb/pbm/storage/s3"
 )
 
 // Config is a pbm config

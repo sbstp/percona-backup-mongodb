@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/minio/minio-go"
-	"github.com/percona/percona-backup-mongodb/pbm"
+	"github.com/sbstp/percona-backup-mongodb/pbm"
 	"gopkg.in/yaml.v2"
 )
 

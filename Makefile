@@ -19,7 +19,7 @@ define ENVS_STATIC
 	CGO_ENABLED=$(CGO_ENABLED)
 endef
 
-versionpath?=github.com/percona/percona-backup-mongodb/version
+versionpath?=github.com/sbstp/percona-backup-mongodb/version
 LDFLAGS= -X $(versionpath).version=$(VERSION) -X $(versionpath).gitCommit=$(GITCOMMIT) -X $(versionpath).gitBranch=$(GITBRANCH) -X $(versionpath).buildTime=$(BUILDTIME) -X $(versionpath).version=$(VERSION)
 LDFLAGS_STATIC=$(LDFLAGS) -extldflags "-static"
 

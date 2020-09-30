@@ -471,15 +471,15 @@ build_tarball(){
 
     tar xzf $TARFILE
     rm -f $TARFILE
-    mkdir -p build/src/github.com/percona/percona-backup-mongodb
-    mv ${PSMDIR}/* build/src/github.com/percona/percona-backup-mongodb/
+    mkdir -p build/src/github.com/sbstp/percona-backup-mongodb
+    mv ${PSMDIR}/* build/src/github.com/sbstp/percona-backup-mongodb/
     export PATH=/usr/local/go/bin:${PATH}
     export GOROOT="/usr/local/go/"
     export GOPATH=${PWD}/build
     export PATH="/usr/local/go/bin:${PATH}:${GOPATH}"
     export GOBINPATH="/usr/local/go/bin"
 
-    cd build/src/github.com/percona/percona-backup-mongodb/
+    cd build/src/github.com/sbstp/percona-backup-mongodb/
     source VERSION
     export VERSION
     export GITBRANCH
@@ -520,7 +520,7 @@ VERSION="1.0.0"
 RELEASE="1"
 REVISION=0
 BRANCH="nocoord"
-REPO="https://github.com/percona/percona-backup-mongodb.git"
+REPO="https://github.com/sbstp/percona-backup-mongodb.git"
 PRODUCT=percona-backup-mongodb
 parse_arguments PICK-ARGS-FROM-ARGV "$@"
 PSM_BRANCH=${BRANCH}

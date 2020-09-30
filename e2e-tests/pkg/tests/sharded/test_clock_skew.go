@@ -3,7 +3,7 @@ package sharded
 import (
 	"log"
 
-	"github.com/percona/percona-backup-mongodb/e2e-tests/pkg/pbm"
+	"github.com/sbstp/percona-backup-mongodb/e2e-tests/pkg/pbm"
 )
 
 func (c *Cluster) ClockSkew() {

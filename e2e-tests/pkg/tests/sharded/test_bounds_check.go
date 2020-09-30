@@ -8,7 +8,7 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 
-	"github.com/percona/percona-backup-mongodb/e2e-tests/pkg/pbm"
+	"github.com/sbstp/percona-backup-mongodb/e2e-tests/pkg/pbm"
 )
 
 type scounter struct {

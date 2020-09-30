@@ -50,7 +50,7 @@ the |percona-release| utility.
 |pbm| is available for installation from your package management system when you
 enable the *tools* repository.
 
-.. seealso:: 
+.. seealso::
 
    Configuring |percona| repositories
       https://www.percona.com/doc/percona-repo-config/index.html
@@ -104,8 +104,8 @@ To build the project (from the project dir):
 
 .. code-block:: bash
 
-   $ go get -d github.com/percona/percona-backup-mongodb
-   $ cd "$(go env GOPATH)/src/github.com/percona/percona-backup-mongodb"
+   $ go get -d github.com/sbstp/percona-backup-mongodb
+   $ cd "$(go env GOPATH)/src/github.com/sbstp/percona-backup-mongodb"
    $ make
 
 After :program:`make` completes, you can find |pbm.app| and |pbm-agent| binaries
