@@ -210,7 +210,7 @@ func (r *Restore) Run(cmd pbm.RestoreCmd) (err error) {
 			BulkBufferSize:           100,
 			BypassDocumentValidation: true,
 			Drop:                     true,
-			NumInsertionWorkers:      2,
+			NumInsertionWorkers:      1,
 			NumParallelCollections:   1,
 			PreserveUUID:             preserveUUID,
 			StopOnError:              true,
